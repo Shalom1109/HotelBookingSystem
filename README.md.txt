@@ -8,9 +8,9 @@ A Java CLI application for managing hotel room reservations, guest billing, and 
 * Administrative controls and database persistence
 
 ## Tech Stack
-* **Language:** Java (Core Java, OOPs)
-* **Database:** MySQL
-* **Database Connector:** JDBC
+* Language: Java (Core Java, OOPs)
+* Database: MySQL
+* Database Connector: JDBC
 
 ## How to Run
 1. Clone this repository.

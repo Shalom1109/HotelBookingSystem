@@ -1,17 +1,17 @@
 # Java compiled binaries
-*.class
+.class
 bin/
 target/
 build/
 
 # IDE config files
 .idea/
-*.iml
+.iml
 .vscode/
 .settings/
 .classpath
 .project
 
 # Logs & Local env
-*.env
-*.log
+.env
+.log
