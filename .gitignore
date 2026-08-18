@@ -1,0 +1,17 @@
+# Java compiled binaries
+*.class
+bin/
+target/
+build/
+
+# IDE config files
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Logs & Local env
+*.env
+*.log
