@@ -1,9 +1,25 @@
 package com.hotel.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "rooms")
 public class Room {
+
+    @Id
+    @Column(name = "room_number")
     private int roomNumber;
+
+    @Column(name = "room_type", nullable = false, length = 50)
     private String roomType;
+
+    @Column(name = "price_per_night", nullable = false)
     private double pricePerNight;
+
+    @Column(name = "is_available")
     private boolean isAvailable;
 
     public Room() {}

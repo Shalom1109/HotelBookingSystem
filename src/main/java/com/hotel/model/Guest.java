@@ -1,30 +1,38 @@
 package com.hotel.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "guests")
 public class Guest {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "guest_id")
     private int guestId;
+
+    @Column(name = "full_name", nullable = false, length = 100)
     private String fullName;
+
+    @Column(name = "email", nullable = false, unique = true, length = 100)
     private String email;
+
+    @Column(name = "phone", nullable = false, length = 15)
     private String phone;
 
-    // Default Constructor
     public Guest() {}
 
-    // Constructor without guestId (for adding new guests before SQL auto-generates ID)
     public Guest(String fullName, String email, String phone) {
         this.fullName = fullName;
         this.email = email;
         this.phone = phone;
     }
 
-    // Constructor with guestId (for fetching existing guests from SQL)
-    public Guest(int guestId, String fullName, String email, String phone) {
-        this.guestId = guestId;
-        this.fullName = fullName;
-        this.email = email;
-        this.phone = phone;
-    }
-
-    // Getters and Setters
     public int getGuestId() { return guestId; }
     public void setGuestId(int guestId) { this.guestId = guestId; }
 
@@ -36,10 +44,4 @@ public class Guest {
 
     public String getPhone() { return phone; }
     public void setPhone(String phone) { this.phone = phone; }
-
-    @Override
-    public String toString() {
-        return String.format("Guest ID: %-3d | Name: %-20s | Email: %-25s | Phone: %s",
-                guestId, fullName, email, phone);
-    }
 }

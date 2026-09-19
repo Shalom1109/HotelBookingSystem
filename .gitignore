@@ -1,17 +1,15 @@
-# Java compiled binaries
-.class
-bin/
 target/
-build/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# IDE config files
+### IntelliJ IDEA ###
 .idea/
-.iml
-.vscode/
-.settings/
-.classpath
-.project
+*.iws
+*.iml
+*.ipr
+out/
 
-# Logs & Local env
-.env
-.log
+### System Files ###
+.DS_Store
+Thumbs.db
